@@ -1,5 +1,4 @@
 const mongoose = require("./connect");
-
 var userSchema = new mongoose.Schema({
     user:String,
     password:String,
@@ -10,4 +9,4 @@ var userSchema = new mongoose.Schema({
     registerDate:Date
 });
 var USER=mongoose.model('User',userSchema);
-module.exports=USER;
+module.exports=USER,{keys:["user","password","name","email","role","phone"]};
