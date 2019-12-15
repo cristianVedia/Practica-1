@@ -56,7 +56,7 @@ router.patch("/user",(req, res, next) => {
         return;
     }
     var objkeys = Object.keys(data);
-    for (var i=0; i< objkeys.length; i++){
+    for (var i=0; i< objkeys; i++){
         if (!checkKeys(objkeys[i])){
             res.status(300).json({
                 "msn": "Tus parametros son incorrectos "+ objkeys[i]
@@ -65,7 +65,7 @@ router.patch("/user",(req, res, next) => {
         };
     }
     user.update({_id: params.id}, data).exec((err, docs) => {
-        res.status(300).json(docs);
+        res.status(200).json(docs);
     });
 });
     function checkKeys(key){

@@ -9,4 +9,4 @@ var userSchema = new mongoose.Schema({
     registerDate:Date
 });
 var USER=mongoose.model('User',userSchema);
-module.exports=USER,{keys:["user","password","name","email","role","phone"]};
+module.exports=USER,{USER,keys:["user","password","name","email","phone"]};//parametros a actualizar
